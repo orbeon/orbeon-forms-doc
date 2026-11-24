@@ -1,4 +1,4 @@
-# XForms - Variables
+# XForms variables
 
 ## Rationale
 

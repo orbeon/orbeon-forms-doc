@@ -1,4 +1,4 @@
-# UI refresh events
+# XForms UI refresh events
 
 
 

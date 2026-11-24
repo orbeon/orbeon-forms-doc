@@ -1,4 +1,4 @@
-# Character counter
+# Character counter component
 
 ## Availability
 

@@ -1,4 +1,4 @@
-# Email Settings dialog
+# Form Builder Email Settings dialog
 
 ## Availability
 

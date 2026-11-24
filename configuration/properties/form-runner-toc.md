@@ -1,4 +1,4 @@
-# Table of contents
+# Table of contents configuration properties
 
 ## Introduction
 

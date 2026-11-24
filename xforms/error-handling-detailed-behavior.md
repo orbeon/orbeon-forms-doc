@@ -1,4 +1,4 @@
-# Detailed behavior
+# XForms error handling detailed behavior
 
 See also:
 

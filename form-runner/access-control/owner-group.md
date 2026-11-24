@@ -1,4 +1,4 @@
-# Owner and group member
+# Owner and group member permissions
 
 ## Availability
 

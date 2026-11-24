@@ -1,4 +1,4 @@
-# Form Definition Format
+# Form definition format
 
 ## Overview
 

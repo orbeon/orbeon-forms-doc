@@ -1,4 +1,4 @@
-# Time
+# Time component
 
 ## What it does
 

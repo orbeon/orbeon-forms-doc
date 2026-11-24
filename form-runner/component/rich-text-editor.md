@@ -1,4 +1,4 @@
-# Formatted Text / Rich Text Editor
+# Formatted Text / Rich Text Editor component
 
 ## Rationale
 

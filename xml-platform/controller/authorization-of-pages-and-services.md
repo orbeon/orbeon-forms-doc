@@ -1,4 +1,4 @@
-# Authorization of Pages and Services
+# Authorizing pages and services in the Page Flow Controller
 
 ## Availability
 

@@ -1,4 +1,4 @@
-# Output
+# XForms output control
 
 ## Basic Usage
 

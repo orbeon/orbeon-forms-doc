@@ -1,4 +1,4 @@
-# XForms
+# XForms configuration properties
 
 ## Default values
 

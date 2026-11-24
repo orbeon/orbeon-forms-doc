@@ -1,4 +1,4 @@
-# Error summary
+# Error summary component
 
 ## What it does
 

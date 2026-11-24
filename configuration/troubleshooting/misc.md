@@ -1,4 +1,4 @@
-# Misc
+# Miscellaneous troubleshooting
 
 ## Session not found when running both Tomcat and WebLogic
 

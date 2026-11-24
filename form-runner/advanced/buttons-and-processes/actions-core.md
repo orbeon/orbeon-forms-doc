@@ -1,4 +1,4 @@
-# Core actions
+# Core process actions
 
 ## Introduction
 

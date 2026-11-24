@@ -1,4 +1,4 @@
-# Installation
+# XForms tutorial: Installation
 
 ## Downloading and installing Java
 

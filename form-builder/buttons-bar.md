@@ -1,4 +1,4 @@
-# Buttons bar
+# Form Builder buttons bar
 
 ## Introduction
 

@@ -1,4 +1,4 @@
-# Number
+# Number component
 
 ## What it does
 

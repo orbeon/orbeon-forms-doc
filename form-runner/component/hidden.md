@@ -1,4 +1,4 @@
-# Hidden field
+# Hidden field component
 
 ## Availability
 

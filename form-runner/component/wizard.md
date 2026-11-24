@@ -1,4 +1,4 @@
-# Wizard Component
+# Wizard component
 
 
 

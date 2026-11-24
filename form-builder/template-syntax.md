@@ -1,4 +1,4 @@
-# Template syntax
+# Form Builder template syntax
 
 ## Availability
 

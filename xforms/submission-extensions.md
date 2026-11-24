@@ -1,4 +1,4 @@
-# Other submission extensions
+# Other XForms submission extensions
 
 ## Annotating submitted XML data with xxf:annotate
 

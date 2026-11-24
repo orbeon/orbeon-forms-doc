@@ -1,4 +1,4 @@
-# Alert dialog
+# Alert dialog component
 
 ## Rationale
 

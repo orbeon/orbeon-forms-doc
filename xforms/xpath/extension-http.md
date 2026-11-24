@@ -1,4 +1,4 @@
-# HTTP request functions
+# XPath HTTP extension functions
 
 
 

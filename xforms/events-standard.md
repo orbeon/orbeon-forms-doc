@@ -1,4 +1,4 @@
-# Standard event support
+# Standard XForms event support
 
 ## Events in XForms
 

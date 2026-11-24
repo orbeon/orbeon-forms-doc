@@ -1,4 +1,4 @@
-# Tomcat
+# Installing on Apache Tomcat
 
 ## Introduction
 

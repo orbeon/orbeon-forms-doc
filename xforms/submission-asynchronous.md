@@ -1,4 +1,4 @@
-# Asynchronous Submissions
+# Asynchronous XForms submissions
 
 ## Rationale
 

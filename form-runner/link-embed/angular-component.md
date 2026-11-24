@@ -1,4 +1,4 @@
-# Angular component
+# Form Runner Angular component
 
 ## Availability
 

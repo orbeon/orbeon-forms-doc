@@ -1,4 +1,4 @@
-# WildFly
+# Installing on WildFly
 
 ## Introduction
 

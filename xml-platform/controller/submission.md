@@ -1,4 +1,4 @@
-# XML submission
+# Page Flow Controller XML submission
 
 ## Rationale
 

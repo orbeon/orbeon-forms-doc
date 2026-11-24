@@ -1,4 +1,4 @@
-# Replication
+# Session and cache replication
 
 ## Availability
 

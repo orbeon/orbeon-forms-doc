@@ -1,4 +1,4 @@
-# Form Builder
+# Form Builder configuration properties
 
 ## Default values
 

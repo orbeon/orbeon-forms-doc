@@ -1,4 +1,4 @@
-# XML functions
+# XPath XML extension functions
 
 ## xf:attribute() / xxf:attribute()
 

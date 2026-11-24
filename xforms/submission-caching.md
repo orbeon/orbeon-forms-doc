@@ -1,4 +1,4 @@
-# Caching extension
+# XForms submission caching
 
 ## Availability
 

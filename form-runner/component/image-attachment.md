@@ -1,4 +1,4 @@
-# Image attachment
+# Image attachment component
 
 ## What it does
 

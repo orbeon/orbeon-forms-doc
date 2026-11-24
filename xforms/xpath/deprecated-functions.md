@@ -1,4 +1,4 @@
-# Deprecated functions
+# Deprecated XPath functions
 
 ## xxf:event()
 

@@ -1,4 +1,4 @@
-# Open selection
+# Open selection component
 
 ## Availability
 

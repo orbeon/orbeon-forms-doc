@@ -1,4 +1,4 @@
-# FAQ - Licensing
+# FAQ: Licensing
 
 ## Is there any cost associated with using Orbeon Forms?
 

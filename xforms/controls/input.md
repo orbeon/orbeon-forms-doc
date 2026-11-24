@@ -1,4 +1,4 @@
-# Input
+# XForms input control
 
 ## Basic Usage
 

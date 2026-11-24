@@ -1,4 +1,4 @@
-# Configuring an eXist-db database
+# Configuring a Form Runner eXist database
 
 ## Deprecation
 

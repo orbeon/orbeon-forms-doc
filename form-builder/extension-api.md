@@ -1,4 +1,4 @@
-# Extension API
+# Form Builder Extension API
 
 ## Availability
 

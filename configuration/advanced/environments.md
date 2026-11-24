@@ -1,4 +1,4 @@
-# Environments
+# Deployment environments
 
 ## Types of environments
 

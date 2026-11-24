@@ -1,4 +1,4 @@
-# Users
+# Users and authentication in Form Runner
 
 ## Providing information about the user
 

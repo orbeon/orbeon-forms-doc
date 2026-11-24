@@ -1,4 +1,4 @@
-# Formulas
+# Form Builder formulas
 
 ## Formulas and XPath
 

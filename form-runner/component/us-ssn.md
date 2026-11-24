@@ -1,4 +1,4 @@
-# US Social Security Number (SSN)
+# US Social Security Number (SSN) component
 
 ## Availability
 

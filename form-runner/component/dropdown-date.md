@@ -1,4 +1,4 @@
-# Dropdown date
+# Dropdown date component
 
 ## What it does
 

@@ -1,4 +1,4 @@
-# JavaScript companion classes
+# XBL JavaScript companion classes
 
 ## Rationale
 

@@ -1,4 +1,4 @@
-# US Employer Identification Number (EIN)
+# US Employer Identification Number (EIN) component
 
 ## Availability
 

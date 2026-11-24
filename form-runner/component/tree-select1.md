@@ -1,4 +1,4 @@
-# Single-selection tree
+# Single-selection tree component
 
 ## Availability
 

@@ -1,4 +1,4 @@
-# Source code editor
+# Source code editor component
 
 ## Overview
 

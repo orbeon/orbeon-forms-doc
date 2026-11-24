@@ -1,4 +1,4 @@
-# Initial data properties
+# Initial data configuration properties
 
 When creating new form data (for instance going to the URL `/fr/orbeon/bookshelf/new`), the initial data in the form can come from the following sources:
 

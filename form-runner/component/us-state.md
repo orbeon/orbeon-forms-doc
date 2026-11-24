@@ -1,4 +1,4 @@
-# US state
+# US state component
 
 ## Overview
 

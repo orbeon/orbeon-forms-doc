@@ -1,4 +1,4 @@
-# Maps and arrays Functions
+# XPath maps and arrays functions
 
 ## Introduction
 

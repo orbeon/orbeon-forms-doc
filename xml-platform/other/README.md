@@ -1,2 +1,2 @@
-# Other
+# Other XML Platform topics
 

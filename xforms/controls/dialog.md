@@ -1,4 +1,4 @@
-# Dialog control
+# XForms dialog control
 
 ## Declaring a dialog control
 

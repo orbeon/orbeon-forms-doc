@@ -1,4 +1,4 @@
-# Simple process syntax
+# Form Runner simple process syntax
 
 ## Defining a process
 

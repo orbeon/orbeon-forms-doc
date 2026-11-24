@@ -1,4 +1,4 @@
-# Label, hint, help
+# XForms label, hint, and help
 
 ## External label, hint, help
 

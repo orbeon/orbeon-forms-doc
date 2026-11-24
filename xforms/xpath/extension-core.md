@@ -1,4 +1,4 @@
-# Core functions
+# XPath core extension functions
 
 ## xxf:document-id()
 

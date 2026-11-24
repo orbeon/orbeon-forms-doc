@@ -1,4 +1,4 @@
-# International Securities Identification Number (ISIN)
+# International Securities Identification Number (ISIN) component
 
 ## Availability
 

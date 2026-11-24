@@ -1,4 +1,4 @@
-# Adding a feed
+# Bookcast tutorial: Adding a feed
 
 ## What is it?
 

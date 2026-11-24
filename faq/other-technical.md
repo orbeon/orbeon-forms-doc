@@ -1,4 +1,4 @@
-# Other technical questions
+# FAQ: Other technical questions
 
 ## Is Orbeon Forms an XForms Engine?
 

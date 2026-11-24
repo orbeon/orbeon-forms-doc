@@ -1,4 +1,4 @@
-# XBL Extensions
+# XBL extensions
 
 ## Namespaces
 

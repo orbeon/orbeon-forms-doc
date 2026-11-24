@@ -1,4 +1,4 @@
-# Other configuration elements
+# Other Page Flow Controller elements
 
 ## Overview
 

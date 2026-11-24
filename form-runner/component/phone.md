@@ -1,4 +1,4 @@
-# Phone Number
+# Phone number component
 
 ## Availability
 

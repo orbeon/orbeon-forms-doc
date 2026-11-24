@@ -1,4 +1,4 @@
-# US Phone Number component
+# US phone number component
 
 {% hint style="info" %}
 Starting with Orbeon Forms 2026.1, use the [Phone Number](phone.md) (`fr:phone`) component instead, which supports both US and international phone numbers. The `fr:us-phone` component remains supported for backward compatibility in existing forms.

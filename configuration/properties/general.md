@@ -1,4 +1,4 @@
-# General
+# General configuration properties
 
 ## Default values
 

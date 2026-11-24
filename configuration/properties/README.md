@@ -1,4 +1,4 @@
-# Properties
+# Configuration properties
 
 ## Overview
 

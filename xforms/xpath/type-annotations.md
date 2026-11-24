@@ -1,4 +1,4 @@
-# Type annotations
+# XPath type annotations
 
 ## Basics
 

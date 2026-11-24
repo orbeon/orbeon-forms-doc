@@ -1,4 +1,4 @@
-# Flat view
+# Relational database flat view
 
 ## Usage
 

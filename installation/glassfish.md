@@ -1,4 +1,4 @@
-# GlassFish
+# Installing on GlassFish
 
 ## Introduction
 

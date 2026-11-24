@@ -1,4 +1,4 @@
-# Video
+# Video component
 
 ## Availability
 

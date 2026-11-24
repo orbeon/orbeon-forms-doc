@@ -1,4 +1,4 @@
-# Other event extensions
+# Other XForms event extensions
 
 ## Creating keyboard shortcuts with the keypress event
 

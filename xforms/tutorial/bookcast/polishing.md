@@ -1,4 +1,4 @@
-# Polishing the app
+# Bookcast tutorial: Polishing the app
 
 ## Making things look nicer
 

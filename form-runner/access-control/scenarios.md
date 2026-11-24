@@ -1,4 +1,4 @@
-# Scenarios
+# Access control scenarios
 
 ## 1. Anonymous data capture with administrator
 

@@ -1,4 +1,4 @@
-# Oracle WebLogic 11g
+# Installing on Oracle WebLogic
 
 ## Introduction
 

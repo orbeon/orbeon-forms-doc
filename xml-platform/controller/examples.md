@@ -1,4 +1,4 @@
-# Examples
+# Page Flow Controller examples
 
 ## Redirection with the PFC
 

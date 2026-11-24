@@ -1,4 +1,4 @@
-# Image annotation
+# Image annotation component
 
 ## Rationale
 

@@ -1,4 +1,4 @@
-# Date
+# Date component
 
 ## What it does
 

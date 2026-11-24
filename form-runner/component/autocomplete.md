@@ -1,4 +1,4 @@
-# Autocomplete
+# Autocomplete component
 
 \[SINCE Orbeon Forms 2026.1] This component has been removed. Existing uses opened in Form Builder are automatically migrated to a Dynamic Dropdown with Search. The information below applies only to older versions.
 

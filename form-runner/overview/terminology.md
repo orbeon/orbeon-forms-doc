@@ -1,4 +1,4 @@
-# Terminology
+# Form Runner terminology
 
 ## Rationale
 

@@ -1,4 +1,4 @@
-# Tips
+# XPath tips
 
 ## XPath tips
 

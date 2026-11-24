@@ -1,4 +1,4 @@
-# Section
+# Section component
 
 ## What it does
 

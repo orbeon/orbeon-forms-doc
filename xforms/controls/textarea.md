@@ -1,4 +1,4 @@
-# Text area
+# XForms textarea control
 
 ## Basic usage
 

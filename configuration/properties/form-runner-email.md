@@ -1,4 +1,4 @@
-# Email properties
+# Email configuration properties
 
 ## Email transport configuration
 

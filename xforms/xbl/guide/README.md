@@ -1,2 +1,2 @@
-# Guide
+# XBL components guide
 

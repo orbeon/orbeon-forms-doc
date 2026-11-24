@@ -1,4 +1,4 @@
-# Basics
+# Page Flow Controller basics
 
 ## Page flow configuration
 

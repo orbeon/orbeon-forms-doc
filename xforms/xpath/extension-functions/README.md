@@ -1,2 +1,2 @@
-# Extension functions
+# XPath extension functions
 

@@ -1,4 +1,4 @@
-# Controls functions
+# XPath controls extension functions
 
 ## xxf:binding()
 

@@ -1,4 +1,4 @@
-# Scripting actions
+# XForms scripting actions
 
 ## Calling client-side JavaScript
 

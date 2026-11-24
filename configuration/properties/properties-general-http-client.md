@@ -1,4 +1,4 @@
-# HTTP client configuration properties 
+# HTTP client configuration properties
 
 ## Proxy setup
 

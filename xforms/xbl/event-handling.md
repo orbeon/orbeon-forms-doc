@@ -1,4 +1,4 @@
-# Event handling
+# XBL event handling
 
 ## Event propagation
 

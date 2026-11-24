@@ -1,4 +1,4 @@
-# Legal Entity Identifier (LEI)
+# Legal Entity Identifier (LEI) component
 
 ## Availability
 

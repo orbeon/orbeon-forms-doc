@@ -1,4 +1,4 @@
-# URL generator
+# URL generator processor
 
 ## Introduction
 

@@ -1,4 +1,4 @@
-# Standard functions
+# Standard XPath functions
 
 ## XPath 2.0 functions
 

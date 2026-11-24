@@ -1,4 +1,4 @@
-# FAQ - Resources and Support
+# FAQ: Resources and support
 
 ## How can I get support for Orbeon Forms?
 

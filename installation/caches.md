@@ -1,4 +1,4 @@
-# Orbeon Forms Caches
+# Orbeon Forms caches
 
 ## In-memory caches
 

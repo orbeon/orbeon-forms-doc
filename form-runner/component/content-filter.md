@@ -1,4 +1,4 @@
-# Content filter
+# Content filter component
 
 ## Availability
 

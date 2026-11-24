@@ -1,4 +1,4 @@
-# Other functions
+# Other XPath extension functions
 
 ## xxf:decode-iso9075-14()
 

@@ -1,4 +1,4 @@
-# XForms inspector
+# XForms inspector component
 
 ## Overview
 

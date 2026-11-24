@@ -1,4 +1,4 @@
-# FAQ - Form Builder and Form Runner
+# FAQ: Form Builder and Form Runner
 
 ## General questions
 

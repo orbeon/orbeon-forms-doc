@@ -1,4 +1,4 @@
-# Caching
+# Persistence API caching
 
 ## Rationale
 

@@ -1,2 +1,2 @@
-# Contributors
+# Contributing to Orbeon Forms
 

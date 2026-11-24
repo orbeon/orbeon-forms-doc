@@ -1,4 +1,4 @@
-# Time window
+# Time window form settings
 
 \[SINCE Orbeon Forms 2023.1] \[Orbeon Forms PE only]
 

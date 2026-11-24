@@ -1,4 +1,4 @@
-# Messages
+# Form Builder Messages dialog
 
 [\[SINCE Orbeon Forms 2023.1\]](../release-notes/orbeon-forms-2023.1.md)
 

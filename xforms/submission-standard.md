@@ -1,4 +1,4 @@
-# Standard Submissions Support
+# Standard XForms submission support
 
 ## Introduction
 

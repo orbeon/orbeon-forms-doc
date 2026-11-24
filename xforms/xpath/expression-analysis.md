@@ -1,4 +1,4 @@
-# Expression analysis
+# XPath expression analysis
 
 ## Availability
 

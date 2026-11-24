@@ -1,4 +1,4 @@
-# Validation functions
+# Implementing validation functions
 
 ## Introduction
 

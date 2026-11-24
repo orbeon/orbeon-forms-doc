@@ -1,4 +1,4 @@
-# Yes/No answer
+# Yes/No answer component
 
 ## Availability
 

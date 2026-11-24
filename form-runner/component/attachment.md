@@ -1,4 +1,4 @@
-# Attachment
+# Attachment component
 
 ## What it does
 

@@ -1,4 +1,4 @@
-# XForms models
+# XForms models in XBL components
 
 ## Placement of local models
 

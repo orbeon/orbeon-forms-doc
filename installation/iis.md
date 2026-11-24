@@ -1,4 +1,4 @@
-# IIS
+# Reverse proxy with IIS
 
 ## Rationale
 

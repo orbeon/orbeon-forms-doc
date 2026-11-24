@@ -1,4 +1,4 @@
-# Login & Logout
+# Form Runner login and logout
 
 \[SINCE Orbeon Forms 2018.2]
 

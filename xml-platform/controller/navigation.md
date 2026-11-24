@@ -1,4 +1,4 @@
-# Navigating between pages
+# Page Flow Controller navigation
 
 ## Page flow
 

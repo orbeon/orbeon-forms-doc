@@ -1,4 +1,4 @@
-# XBL Bindings
+# XBL bindings
 
 ## Introduction
 

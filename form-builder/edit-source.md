@@ -1,4 +1,4 @@
-# Edit source
+# Editing form source XML in Form Builder
 
 ## General rule
 

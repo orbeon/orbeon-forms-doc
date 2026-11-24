@@ -1,4 +1,4 @@
-# JSON functions
+# XPath JSON extension functions
 
 ## xxf:json-to-xml()
 

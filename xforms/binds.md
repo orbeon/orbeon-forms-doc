@@ -1,4 +1,4 @@
-# Binds
+# XForms binds
 
 ## Introduction
 

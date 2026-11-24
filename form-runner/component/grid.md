@@ -1,4 +1,4 @@
-# Grid
+# Grid component
 
 ## What it does
 

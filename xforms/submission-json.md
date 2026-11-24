@@ -1,4 +1,4 @@
-# JSON support
+# XForms JSON submission support
 
 \[SINCE Orbeon Forms 2016.1]
 

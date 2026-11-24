@@ -1,4 +1,4 @@
-# Handwritten signature
+# Handwritten signature component
 
 ## Rationale
 

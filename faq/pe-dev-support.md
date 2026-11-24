@@ -1,4 +1,4 @@
-# FAQ - PE and Dev Support
+# FAQ: PE and Dev Support
 
 ## What is the difference between the Development and Production subscriptions?
 

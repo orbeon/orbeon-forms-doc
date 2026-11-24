@@ -1,4 +1,4 @@
-# Repeater Component
+# Repeater component
 
 ## What it does
 

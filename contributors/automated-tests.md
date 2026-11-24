@@ -1,4 +1,4 @@
-# Automated Tests
+# Orbeon Forms automated tests
 
 ## Levels of tests
 

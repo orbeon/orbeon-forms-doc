@@ -1,4 +1,4 @@
-# Currency
+# Currency component
 
 ## What it does
 

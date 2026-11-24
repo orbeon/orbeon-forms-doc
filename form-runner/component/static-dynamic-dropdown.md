@@ -1,4 +1,4 @@
-# Static and dynamic dropdown
+# Static and dynamic dropdown component
 
 \[SINCE Orbeon Forms 2019.1]
 

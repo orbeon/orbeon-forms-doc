@@ -1,4 +1,4 @@
-# The Hello application
+# XForms tutorial: The Hello application
 
 
 

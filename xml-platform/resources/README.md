@@ -1,2 +1,2 @@
-# Resources
+# XML Platform resources
 

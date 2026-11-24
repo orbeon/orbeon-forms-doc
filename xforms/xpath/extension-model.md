@@ -1,4 +1,4 @@
-# Model functions
+# XPath model extension functions
 
 ## xxf:bind()
 

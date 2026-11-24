@@ -1,4 +1,4 @@
-# CSV functions
+# XPath CSV extension functions
 
 ## xxf:csv-to-xml()
 

@@ -1,4 +1,4 @@
-# Captcha
+# Captcha component
 
 ## Introduction
 

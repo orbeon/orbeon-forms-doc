@@ -1,4 +1,4 @@
-# Detail page
+# Detail page configuration properties
 
 ## Children pages
 

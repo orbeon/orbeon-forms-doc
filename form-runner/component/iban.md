@@ -1,4 +1,4 @@
-# International Bank Account Number (IBAN)
+# International Bank Account Number (IBAN) component
 
 ## Availability
 

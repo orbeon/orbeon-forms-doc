@@ -1,4 +1,4 @@
-# Microsoft Azure
+# Deploying on Microsoft Azure
 
 ## Availability
 

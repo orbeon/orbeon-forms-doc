@@ -1,4 +1,4 @@
-# Date and Time
+# Date and time component
 
 ## What it does
 

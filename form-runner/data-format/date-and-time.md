@@ -1,4 +1,4 @@
-# Date and Time Format
+# Date and time data format
 
 
 ## Introduction

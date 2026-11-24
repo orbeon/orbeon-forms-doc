@@ -1,4 +1,4 @@
-# The basic app
+# Bookcast tutorial: The basic app
 
 ## Getting started
 

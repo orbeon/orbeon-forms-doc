@@ -1,4 +1,4 @@
-# Organizations
+# Organization-based permissions
 
 \[SINCE Orbeon Forms 2016.3]
 

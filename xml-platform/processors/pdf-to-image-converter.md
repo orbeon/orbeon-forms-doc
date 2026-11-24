@@ -1,4 +1,4 @@
-# PDF to image converter
+# PDF to image converter processor
 
 ## Availability
 

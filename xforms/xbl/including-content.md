@@ -1,4 +1,4 @@
-# Including content
+# Including content in XBL components
 
 ## Using xbl:content
 

@@ -1,4 +1,4 @@
-# IBM WebSphere 8.5
+# Installing on IBM WebSphere
 
 ## Introduction
 

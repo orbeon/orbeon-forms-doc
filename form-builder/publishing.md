@@ -1,4 +1,4 @@
-# Publishing
+# Publishing forms in Form Builder
 
 ## Introduction
 

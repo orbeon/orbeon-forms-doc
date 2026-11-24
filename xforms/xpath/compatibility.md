@@ -1,4 +1,4 @@
-# Compatibility
+# XPath compatibility
 
 ## Support for let expressions
 

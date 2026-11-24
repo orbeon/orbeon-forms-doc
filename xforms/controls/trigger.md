@@ -1,4 +1,4 @@
-# Button
+# XForms button/trigger control
 
 ## Introduction
 
