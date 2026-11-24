@@ -31,7 +31,8 @@ The following properties control the connection to the SMTP server when using th
     * blank: none (plain SMTP)
     * `tls`: use TLS
     * `ssl`: use SSL
-- `username`: SMTP username (required if TLS or SSL is used, optional otherwise)
+- `username`: optional SMTP username
+    - [SINCE Orbeon Forms 2026.1, 2025.1.4] Optional even when TLS or SSL is used (for example with SMTP relays that authenticate senders by IP address). Before Orbeon Forms 2025.1.4, `username` was required when `encryption` was set to `tls` or `ssl`.
 - `credentials`: SMTP password
 - `helo-name`: local host name sent in the SMTP `EHLO`/`HELO` command
     - [SINCE Orbeon Forms 2026.1, 2025.1.3]
