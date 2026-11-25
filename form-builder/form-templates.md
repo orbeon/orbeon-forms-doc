@@ -11,6 +11,6 @@ When you create a new form, you can start from a blank form or from a template. 
 - Blank form
 - Wizard form
 
-In addition, Orbeon Forms demo forms are 
+You can also make your own templates: open the [Form Settings](form-settings.md#form-options) of a form, and check "Allow use as form template". That form then shows in the list of templates of the "New Form" dialog.
 
-TODO.
+<figure><img src="images/form-settings-allow-use-as-form-template.png" alt=""><figcaption><p>Marking a form as available as a template</p></figcaption></figure>
