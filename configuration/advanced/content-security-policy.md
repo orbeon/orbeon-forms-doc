@@ -18,6 +18,20 @@ Up until Orbeon Forms 2017.2, Orbeon Forms included some inline scripts and CSS 
 
 With Orbeon Forms 2018.1 and newer, Orbeon Forms no longer produces inline scripts and CSS by default, which allows for these strict values of the `Content-Security-Policy` header. While Orbeon Forms already [takes measures](security.md) against XSS and data injection, disabling the use of inline scripts can make Orbeon Forms even safer by default.
 
+### Inline stylesheets of the head
+
+[\[SINCE Orbeon Forms 2026.1\]](/release-notes/orbeon-forms-2026.1.md)
+
+Orbeon Forms serves the `<style>` elements of the `<head>` of the page from a URL: the `<xh:style>` elements of a form definition, the inline stylesheets of XBL components, and the CSS produced for the [`oxf.fr.style.variable` properties](/form-runner/styling/css-variables.md). With earlier versions, a policy which disallows inline styles, such as `default-src 'self'`, blocked them.
+
+A `<style>` element stays inline when:
+
+- it has an attribute other than `type="text/css"` and `media="all"`;
+- it contains `url(` or `@import`;
+- [combined resources](/configuration/advanced/javascript-css-assets.md#combined-asset-resources) are disabled.
+
+Orbeon Forms doesn't change `style` attributes, for example in rich text content, or the styles which JavaScript libraries add to the page in the browser.
+
 ### Configuration property
 
 The following XForms property allows you to re-enable inline scripts and CSS. The default is `false`:
@@ -30,6 +44,8 @@ The following XForms property allows you to re-enable inline scripts and CSS. Th
 ```
 
 We recommend leaving the value to the default of `false`.
+
+With `true`, the [inline stylesheets of the head](#inline-stylesheets-of-the-head) stay inline too.
 
 ## Generating the Content-Security-Policy header
 

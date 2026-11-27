@@ -219,6 +219,7 @@
     * [Token-based permissions](form-runner/access-control/tokens.md)
   * [Form Runner styling](form-runner/styling/README.md "Styling")
     * [Styling Form Runner with CSS](form-runner/styling/css.md "CSS")
+    * [Form Runner CSS variables](form-runner/styling/css-variables.md "CSS variables")
     * [Form Runner grids CSS](form-runner/styling/grids.md "Grids CSS")
     * [Automatic PDF styling and CSS](form-runner/styling/automatic-pdf.md)
   * [Form Runner APIs](form-runner/api/README.md "APIs")

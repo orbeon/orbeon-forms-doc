@@ -53,9 +53,11 @@ In addition to [`oxf.fr.css.custom.uri`](/configuration/properties/form-runner.m
 
 Orbeon Forms provides CSS variables that allow you to customize various styling aspects such as font sizes, font families, font weights, colors, background colors, and border colors. You can override these variables in a custom CSS file referenced using the `oxf.fr.css.custom.uri.*.*` property.
 
-_NOTE: This is a work in progress. More variables will be introduced in future releases. Variable names are subject to change._
+_NOTE: This is a work in progress. More variables will be introduced in future releases. Variable names are subject to change, except for the [stable variables](css-variables.md#stable-variables) [SINCE Orbeon Forms 2026.1]._
 
-You can view the available CSS variables in the [`theme.less` LESS file on GitHub](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/assets/apps/fr/themes/2025/theme.less).
+You can view the available CSS variables in the `theme.less` LESS file of each theme on GitHub: [2026 theme](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/assets/apps/fr/themes/2026/theme.less), [2025 theme](https://github.com/orbeon/orbeon-forms/blob/master/form-runner/jvm/src/main/assets/apps/fr/themes/2025/theme.less).
+
+[\[SINCE Orbeon Forms 2026.1\]](/release-notes/orbeon-forms-2026.1.md) You can also set CSS variables with properties, without a CSS file: see [CSS variables](css-variables.md). With the built-in themes, a variable set in a custom CSS file takes precedence over these properties: see [Order of precedence](css-variables.md#order-of-precedence).
 
 Example of overriding variables in Form Runner only (not in Form Builder):
 
@@ -244,6 +246,8 @@ You can either:
     
 _NOTE: Since 2018.1, it is no longer recommended to place any inline CSS, as some servers use the [`Content-Security-Policy` header](https://en.wikipedia.org/wiki/Content_Security_Policy) to disable inline scripts and CSS. Orbeon Forms 2018.1 doesn't include any inline scripts and CSS anymore by default._
 
+[\[SINCE Orbeon Forms 2026.1\]](/release-notes/orbeon-forms-2026.1.md) Orbeon Forms serves an `<xh:style>` element of the `<xh:head>` of the form from a URL, so a `Content-Security-Policy` header which disallows inline styles doesn't block it. See [Inline stylesheets of the head](/configuration/advanced/content-security-policy.md#inline-stylesheets-of-the-head).
+
 ### Strength of CSS rules
 
 Bootstrap, XForms engine, Form Runner and Form Builder CSS rules are contained within an enclosing `.orbeon` CSS class. This ensures that the Orbeon CSS rules only apply within an element with that class. It also makes Orbeon CSS rules a bit stronger (more *specific*) than before. You might have to update your custom CSS to take this into account.
@@ -288,5 +292,6 @@ With earlier versions, override the Bootstrap 2 CSS instead:
 
 ## See also
 
+- [CSS variables](css-variables.md)
 - [Grids CSS](grids.md)
 - [Automatic PDF](automatic-pdf.md)

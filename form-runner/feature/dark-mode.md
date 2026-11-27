@@ -147,6 +147,7 @@ Controls whether the color scheme selector appears in the navigation bar.
 * [Form Runner navigation bar](navbar.md)
 * [Color scheme property](../../configuration/properties/form-runner-detail-page.md#color-scheme)
 * [CSS customization and CSS variables](../styling/css.md#overriding-css-variables)
+* [Dark values of CSS variables set with properties](../styling/css-variables.md#dark-color-scheme)
 * [Release notes for Orbeon Forms 2025.1](../../release-notes/orbeon-forms-2025.1.md)
 * [Release notes for Orbeon Forms 2026.1](../../release-notes/orbeon-forms-2026.1.md)
 * Blog post: [User interface dark mode](https://www.orbeon.com/2026/05/dark-mode)

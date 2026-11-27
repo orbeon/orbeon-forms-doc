@@ -59,6 +59,10 @@ For the latest default values of Form Runner properties, see [properties-form-ru
     * `oxf.fr.detail.tiff.compression.quality`
     * `oxf.fr.detail.tiff.scale`
     * `oxf.fr.detail.tiff.filename`
+* [CSS variables](/form-runner/styling/css-variables.md)
+    * `oxf.fr.style.variable.<name>`
+    * `oxf.fr.style.variable.<name>.dark`
+    * `oxf.fr.style.variable.<name>.print`
 
 ## Language
 
